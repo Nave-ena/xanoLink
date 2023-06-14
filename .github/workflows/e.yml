@@ -1,27 +1,27 @@
-name: email_sending
+#name: email_sending
 
-on:
-  schedule:
-    - cron: "*/2 * * * *"
+#on:
+ # schedule:
+ #   - cron: "*/2 * * * *"
 
-  workflow_dispatch:
+  #workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
+#jobs:
+ # build:
+#    runs-on: ubuntu-latest
+#    steps:
+  #    - uses: actions/checkout@v2
+  #    - uses: actions/setup-python@v2
+  #      with:
+  #        python-version: 3.x
+ #     - name: Install dependencies
+ #       run: |
+  #        python -m pip install --upgrade pip
+    #      pip install requests
 
-      - name: Send email
-        env:
-          USER_EMAIL: ${{ secrets.USER_EMAIL }}
-          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
-          RECEIVER: ${{ secrets.RECEIVER }}
-        run: python xano.py
+   #   - name: Send email
+  #      env:
+  #        USER_EMAIL: ${{ secrets.USER_EMAIL }}
+   #       USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+  #        RECEIVER: ${{ secrets.RECEIVER }}
+   #     run: python xano.py
