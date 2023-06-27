@@ -24,7 +24,7 @@ def send_email():
         server.sendmail(user_email, receiver, message)
 
 def get_data():
-    url = "https://x8ki-letl-twmt.n7.xano.io/api:GSAwrAoy:v1/links/get/today"
+    url = "Xano API URL"
     response = requests.get(url)
 
     if response.status_code == 200:
